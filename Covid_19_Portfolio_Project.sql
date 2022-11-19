@@ -18,7 +18,7 @@
 	from CovidDeaths where continent is not null order by location,date 
 
 -- Identifying Total Cases v/s Total Deaths 
--- The following query will show the chances an indidvidual may die if contracted with COVID-19 in India
+-- Death Rate due to COVID-19 in India
 	select Continent, location, date, total_cases,total_deaths, (total_deaths/total_cases)*100 as DeathPercentage  
 	from CovidDeaths where location = 'India' order by location,date 
 
